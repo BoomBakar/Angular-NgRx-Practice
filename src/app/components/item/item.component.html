@@ -1,0 +1,11 @@
+<div class="item-card">
+    <div class="pic">
+        <img src="{{ item.img }}" alt="" />
+    </div>
+    <div class="item-card-title">{{ item.title }}</div>
+    <div class="item-card-price">Rs. {{ item.price }} </div>
+    <div class="item-card-btn">
+        <button class="btn" (click)="addToCart(item)">Add to Cart</button>
+        <button class="btn-rmv" (click)="removeFromCart()">Remove from Cart</button>
+    </div>
+</div>
