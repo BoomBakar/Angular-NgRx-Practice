@@ -8,11 +8,12 @@ import { Store } from '@ngrx/store';
 })
 export class NavbarComponent {
 
-  constructor(private store : Store<{cartCount:number}>){
+  constructor(private store : Store<any>){
 
+    
   }
   
-  cartCount = this.store.select('cartCount');
+  cart = this.store.select('cart');
 
   
   

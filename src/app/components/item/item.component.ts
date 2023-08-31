@@ -15,11 +15,13 @@ export class ItemComponent {
   constructor(private store:Store) {
 
   }
-
-  addToCart(item:any) {
-    this.store.dispatch(addToCart());
+  cart = this.store.select('cart');
+  addToCart() {
+    this.store.dispatch(addToCart(this.item));
+    console.log(this.item);
+    console.log(this.store.select('cart'));
   }
-  removeFromCart() {
-    this.store.dispatch(removeFromCart());
-  }
+  // removeFromCart() {
+  //   this.store.dispatch(removeFromCart(this.smth));
+  // }
 }

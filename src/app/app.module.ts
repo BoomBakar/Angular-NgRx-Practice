@@ -21,7 +21,7 @@ import { ItemComponent } from './components/item/item.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({cartCount: cartReducer})
+    StoreModule.forRoot({cart: cartReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
