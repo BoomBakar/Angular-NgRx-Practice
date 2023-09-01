@@ -5,7 +5,7 @@
     <div class="item-card-title">{{ item.title }}</div>
     <div class="item-card-price">Rs. {{ item.price }} </div>
     <div class="item-card-btn">
-        <button class="btn" (click)="addToCart()">Add to Cart</button>
+        <app-add-item (addItemToCart)="addToCart()"></app-add-item>
         <!-- <button class="btn-rmv" (click)="removeFromCart()">Remove from Cart</button> -->
     </div>
 </div>

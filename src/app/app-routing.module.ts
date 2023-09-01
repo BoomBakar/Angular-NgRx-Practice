@@ -5,11 +5,11 @@ import { ContinentalComponent } from './components/continental/continental.compo
 
 const routes: Routes = [
   { path: 'desi', component: DesiComponent },
-  { path: 'continental', component: ContinentalComponent }
+  { path: 'continental', component: ContinentalComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -3,12 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StoreModule } from '@ngrx/store';
+import { StoreModule, provideStore } from '@ngrx/store';
 import { cartReducer } from './store/cart.reducers';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DesiComponent } from './components/desi/desi.component';
 import { ContinentalComponent } from './components/continental/continental.component';
 import { ItemComponent } from './components/item/item.component';
+import { AddItemComponent } from './add-item/add-item.component';
 
 @NgModule({
   declarations: [
@@ -16,14 +17,15 @@ import { ItemComponent } from './components/item/item.component';
     NavbarComponent,
     DesiComponent,
     ContinentalComponent,
-    ItemComponent
+    ItemComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({cart: cartReducer})
   ],
-  providers: [],
+  providers: [provideStore()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
